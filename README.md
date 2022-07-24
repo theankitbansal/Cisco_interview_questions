@@ -112,3 +112,55 @@ For the connection and translation slots of different protocols, a global idle t
 A transparent firewall or bridge firewall will behave like a line of the layer among 2 devices and can be easily installed into an existing network without any modification into the Internet Protocol (IP) address. The transparent firewall will allow for entering into the traffic of layer 3 from the level of higher security to lower security levels without the help of access lists. It will act similar to a bridge as it inspects and moves network frames between interfaces.
 
 A transparent firewall is considered a “stealth firewall” that supports outside as well as inside interfaces. Using this, security equipment can be connected with the same network on external and internal ports, with a separate VLAN(Virtual Local Area Network) for each interface.
+
+11. Explain how Cut-through LAN switching works.
+
+Cut-through LAN switching is useful in packet-switching systems. In the packet-switching technique, the message will be divided into many smaller units known as packets and it will be individually routed from source to the destination. It does not require the establishment of a dedicated circuit for communication, as it is a connection-less network switching technique.
+
+![image](https://user-images.githubusercontent.com/81725794/180632615-5b870f7f-8375-4507-9f50-06cac8ecf0f4.png)
+
+In cut−through switching, when a packet or data frame begins arriving at a switch or bridge, the transmission of data can be started immediately after the destination address field has arrived. The switch will do a look–up at the address table stored in it and check for the validity of the destination address. If it is a valid address and the outgoing link is available, the data frame transmission into the destination port will be immediately started by a switching device, even before the arrival of the remaining frame.
+
+Here, the switching device will act as a forwarder of data frames. The error checks cannot be performed when it starts forwarding, as the total frame is still not available. For error handling, it depends upon the destination devices.
+
+12. What are the different types of memories used in the CISCO router?
+
+Different types of memories are being used in a CISCO router. They are:
+
+Random Access Memory (RAM): RAM used in a router is the same as the RAM that is installed in our Mobile Phones, Laptops, and PCs. The RAM will be divided into two areas:
+Main Processor Memory: It stores the information that belongs to the routing table, running router configuration, and ARP (Address Resolution Protocol) cache.
+Shared I/ry: It is a temporary storage memory where the queued data packets will be stored.
+When the router gets restarted or rebooted, all the information stored within the RAM will be deleted(that is why it is considered as Volatile memory). We can store the data permanently using NVRAM.
+Non-Volatile Random Access Memory (NVRAM): NVRAM is useful in storing the start-up configuration file which are copies of the CISCO Router Configuration file and will be retained even after rebooting or restarting of router occurs. In this, the data will not be lost and can be easily recovered by rebooting or switching off the router. If you want to permanently save the running configuration files, these files should be moved from RAM to NVRAM.
+Read-Only Memory (ROM): The boot procedure of a CISCO router will begin from the ROM memory section. ROM will have programming instructions such as Bootstrap program and POST (Power-On-Self-Test). POST test is useful in verifying whether hardware components like RAM, CPU, and interfaces are properly working or not. If they are not functioning properly, an error message will be sent by POST. After this, for setting up the CPU and boot functions of the router, the bootstrap application is used. The bootstrap program will be in charge of finding and loading the operating system (IOS) of the router. All this information will be saved or stored inside the ROM and the data will be retained even after switching off or rebooting the router.
+Flash Memory: It is an EPROM (Erasable Programmable Read-only Memory) chip that is more cost-effective for enterprise environments. The router operating system i.e., IOS (Internetwork Operating System) will be available in flash memory. It can be easily upgradable and does not need any hardware changes. Also, the content in flash memory will be retained when the router is switched off or rebooted.
+
+13. What is a deadlock in Operating Systems? What are the situations for the deadlock to happen?
+
+Deadlock refers to the situation that happens in the operating system where each process will enter into the waiting state for obtaining the resource which has been assigned to some other process.
+
+Consider a real-time example of traffic that is going only in a single direction. Here, we can consider the bridge as a resource. If one car backs up, the deadlock situation will be resolved easily. Multiple cars may have to be backed up on deadlock occurrence. So it might lead to starvation.
+
+![image](https://user-images.githubusercontent.com/81725794/180632648-dc720a0b-fc94-431a-9891-93e86d587d1a.png)
+
+The process will be considered to be in a deadlock when the following conditions get satisfied simultaneously:
+
+Mutual Exclusion: When more than one process shares the same resource and all the processes are different, then each process of them has to wait for the other for utilizing the resource as at a time only one process can use the resource.
+Hold and Wait: A process is already holding the resource(at least one) and waiting for resources.
+No pre-emption: We cannot forcefully stop or remove a process among the waiting processes, for releasing the resource.
+Circular Wait: A group of processes will be waiting in a circular manner for the resources held by each other.
+
+14. What is Virtual memory?
+
+Virtual Memory is a method of storage allocation where a part of secondary memory will be emulated as it is the main memory of a computer. The virtual memory will solve the insufficient memory problem by converting part of disk memory into virtual addresses, thus will create a large size of RAM for accomodating the increased memory requirement demand and will provide the illusion that we have a lot of memory. Modern microprocessors will have a built-in Memory Management Unit(MMU) which will translate the virtual addresses into physical addresses.
+
+![image](https://user-images.githubusercontent.com/81725794/180632664-4dc20409-5a43-4b23-b7b6-bbcae7e129ef.png)
+
+The size of virtual storage is limited by the computer system’s addressing scheme and the available quantity of secondary memory will not depend on an actual number of the main storage locations.
+In common, Virtual memory will be implemented through demand paging or in a segmentation system. Also, demand segmentation can be used for providing virtual memory.
+
+15. How will swapping lead to better memory management?
+
+Swapping is a process/memory management technique used by the operating system(os) for increasing the processor utilization by moving a few blocked processes from the main memory into the secondary memory. This will lead to a queue formation that has temporarily suspended processes and the execution will be continued with the processes that are newly arrived. At the regular intervals fixed by the operating system, processes can be moved from the main memory to secondary storage, and then later they can be moved back. Swapping will allow multiple processes to run, that can fit into memory at a single time. Thus, we can say that swapping will lead to better memory management.
+
+![image](https://user-images.githubusercontent.com/81725794/180632677-52b94d78-ec27-46f4-9482-89f4d12d0cd6.png)
