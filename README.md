@@ -53,3 +53,27 @@ With the help of a wireless bridge, we can connect the wireless networks with wi
 
 4. What is an IP access list?
 
+An IP access list is a rule set for traffic control in the network and for reducing the possibilities of network attacks. This list will be useful in filtering the traffic based on rules that are defined for incoming as well as outgoing networks. The standard IP access list features are:
+
+Provide bandwidth control: IP Access lists on a slower link are helpful in preventing excess traffic on a network.
+Trigger dial-on-demand: Access lists do have the right to enforce the criteria for dial and disconnect.
+Provide NAT control: Access lists are helpful in controlling which addresses are translated by NAT (Network Address Translation).
+Control access to Virtual teletype (vty): Access lists on an inbound vty are capable of controlling which person can access the lines to a device. Access lists on an outbound vty are capable of controlling the destinations to which can be reached by the lines from a device.
+Authenticate remote shell (rsh) and Rate Control Protocol (RCP): Using access lists, it is possible to simplify the remote hosts, remote users, and local users identification in an authentication database that is configured for controlling the device access. For receiving incoming rsh as well as rcp protocol requests, the authentication database will enable the Cisco software.
+Block unwanted traffic: These access lists are capable of filtering incoming/outgoing packets on an interface, thus helpful in controlling the network access depending on the source address, destination address, or user authentication. It is also useful in determining the traffic type that is forwarded or blocked at the device interface.
+Limit debug command output: We can limit the debug output using access lists, depending on an IP address or a protocol.
+
+5. Give the reasons why a Layered model is used by the Networking industry.
+
+It provides systematic troubleshooting in the network.
+It clarifies what task has to be done by general function rather than how to do those tasks.
+Modifications made to one layer doesn't affect the other layers in the layered model.
+
+6. What are TACACS (Terminal Access Controller Access Control System) and RADIUS (Remote Authentication Dial In User Service) in networking?
+
+TACACS: It is a group of remote authentication protocols useful in controlling remote authentication and other related services for the networked access control via a centralized server. TACACS will help for determining whether the user is having access to the network or not as it will permit the remote access server to communicate with an authentication server.
+RADIUS: It is an AAA (Authentication, Authorization, and Accounting) protocol to control access to network resources. RADIUS is used by ISPs (Internet Service Providers) and corporations to manage access into the Internet or internal networks across a group of access technologies that include wireless, DSL, modem, and VPNs.
+
+7. What are the Benefits of Subnetting?
+
+Subnetting refers to the process of dividing a larger network into smaller networks. In the below-given image, the network has been divided into two broadcast networks, which will reduce the network load and will provide greater network security to the users.
