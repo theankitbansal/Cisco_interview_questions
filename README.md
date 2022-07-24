@@ -77,3 +77,38 @@ RADIUS: It is an AAA (Authentication, Authorization, and Accounting) protocol to
 7. What are the Benefits of Subnetting?
 
 Subnetting refers to the process of dividing a larger network into smaller networks. In the below-given image, the network has been divided into two broadcast networks, which will reduce the network load and will provide greater network security to the users.
+
+![image](https://user-images.githubusercontent.com/81725794/180632542-9840fcce-42b5-4b7f-b1dc-5e19c308865f.png)
+
+The benefits of subnetting are:
+
+1. Improvement in network performance and speed: Subnetting will enable you to make sure about information remains in the broadcast domain or subnetted network, which permits other subnets for maximizing their speed and effectiveness. Also, subnetting will divide broadcast domains of your network which enables you to control the traffic flow in a better way, thus increasing network performance.
+2. Reduction in network congestion: Using a router for moving the traffic between subnets will lead to no broadcast traffic and any information that does not require to be routed will be moved to other subnets. As the traffic within each subnet has been reduced, there is an increase in the speed of each subnet, which in turn will ease the network congestion.
+3. Boosting network security: You will be able to control the flow of traffic with the help of ACLs (Access Control Lists), QoS (Quality of Service), or route maps, enabling you for identifying threats, close entry points, and target your responses more easily.
+4. Ease administration: Using subnetting, you will be able to create networks that have more logical host limits, as opposed to the IP addressing class limitations: 8 bits (Class A), 16 bits (Class B), and 24 bits (Class C). Subnetting will enable you for selecting the number of bits in your subnetwork, thus creating more realistic host limits. Subnetting will be an effective approach for keeping eyes on the systems of your network, which will help you for determining which system needs attention when problems arise. So we can say that subnetted networks are easier to manage and troubleshoot.
+
+8. How is a TCP connection made?
+
+A TCP(Transmission Control Protocol) connection will be done as given below:
+
+Step 1: At first, the receiver (host) will send a packet to the sender (server) with an SYN (SYNchronize) flag. It is considered as an attempt made to open a connection. Then, the server will respond with an SYN flag and ACK (ACKnowledge) flag for acknowledging(approving) the connection. Now, the receiver will send an ACK flag for confirming the handshake. The operating systems at both ends will be kept informed about the connection establishment.
+
+Step 2: Now the sender will begin data transmission. It will also gain acknowledgements from the receiver. A timer will begin when the sender initiates the sending of data.
+
+Step 3: The data will be retransmitted by the sender if it hasn’t received any acknowledgements even after the timer limit has been exceeded.
+
+Step 4: When the receiver buffer is full (in the case of windowing), the receiver will send a stop signal to the sender. The sender will stop the data transmission.
+
+Step 5: Then after all the data processing is done, the receiver will be sending a go signal into the sender. Now, the sender will again begin transmitting the data.
+
+9. What is the CISCO default TCP session timeout?
+
+The default timeout in the TCP session for CISCO will be one minute. Here, connection slots will get freed on an average of sixty seconds later, when the sequence of normal connection close has been completed. It can be configured into other settings as per the requirements.
+
+For the connection and translation slots of different protocols, a global idle timeout duration can be set manually. The resources will be returned so that pools can be freed, in case slots are not used for the specified idle time.
+
+10. What is a transparent firewall?
+
+A transparent firewall or bridge firewall will behave like a line of the layer among 2 devices and can be easily installed into an existing network without any modification into the Internet Protocol (IP) address. The transparent firewall will allow for entering into the traffic of layer 3 from the level of higher security to lower security levels without the help of access lists. It will act similar to a bridge as it inspects and moves network frames between interfaces.
+
+A transparent firewall is considered a “stealth firewall” that supports outside as well as inside interfaces. Using this, security equipment can be connected with the same network on external and internal ports, with a separate VLAN(Virtual Local Area Network) for each interface.
