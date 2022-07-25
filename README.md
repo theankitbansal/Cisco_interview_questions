@@ -689,3 +689,51 @@ First Occurrence = 8
 Last Occurrence = 9
 
 25. Write a program for reversing each word in a string.
+
+We will make use of a stack for pushing all letters until a space is found in a given string. When space is encountered, we will empty the stack and the reversed word will be printed with a space at the end. This process will be continued until the end of the string has been reached.
+
+// C++ program
+#include <bits/stdc++.h>
+using namespace std;
+
+// Reverses each word of a string
+void reverseEachWords(string s)
+{
+   stack<char> stk;
+
+   /* Traverses the given string and all the characters will be pushed to stack until a space is found. */
+   for (int i = 0; i < s.length(); ++i) {
+       if (s[i] != ' ')
+           stk.push(s[i]);
+       else 
+       {
+           // Contents of the stack will be printed when a space is found.
+           while (stk.empty() == false) 
+           {
+               cout << stk.top();
+               stk.pop();
+           }
+           cout << " ";
+       }
+   }
+
+   // As there may not be space after last word.
+   while (stk.empty() == false) 
+   {
+       cout << stk.top();
+       stk.pop();
+   }
+}
+
+int main()
+{
+   string s = "Welcome To InterviewBit";
+   reverseWords(s);
+   return 0;
+}
+                        
+Output:
+                        
+emocleW oT tiBweivretnI
+                        
+                        
