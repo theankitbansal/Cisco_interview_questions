@@ -164,3 +164,25 @@ In common, Virtual memory will be implemented through demand paging or in a segm
 Swapping is a process/memory management technique used by the operating system(os) for increasing the processor utilization by moving a few blocked processes from the main memory into the secondary memory. This will lead to a queue formation that has temporarily suspended processes and the execution will be continued with the processes that are newly arrived. At the regular intervals fixed by the operating system, processes can be moved from the main memory to secondary storage, and then later they can be moved back. Swapping will allow multiple processes to run, that can fit into memory at a single time. Thus, we can say that swapping will lead to better memory management.
 
 ![image](https://user-images.githubusercontent.com/81725794/180632677-52b94d78-ec27-46f4-9482-89f4d12d0cd6.png)
+
+16. What is Recovery testing?
+
+Recovery testing is a technique used in software testing, which verifies the ability of software to recover from hardware/software failures, crashes, network failures, etc. The recovery testing purpose will be determining whether the software operations can continue even after the integrity loss or disaster. It includes returning the software to the point where integrity was known and doing transaction reprocessing to the point of failure.
+
+17. Differentiate between C and C++.
+
+
+![Screenshot (956)](https://user-images.githubusercontent.com/81725794/180700733-eebab7a5-8f12-41c6-880c-023b566601d9.png)
+
+18. What is a void pointer in C? Can a void pointer be dereferenced without being aware of its type?
+
+A void pointer is a pointer that is useful in pointing to the memory location having an undefined data type at the time of defining a variable, which means it can be any data of any arbitrary type. You can dereference a void pointer only after explicit casting. For example:
+
+![Screenshot (957)](https://user-images.githubusercontent.com/81725794/180700763-d97e6cc9-8e36-4338-bb57-acaa3431fe30.png)
+
+In the above-given code, we have declared a normal variable x with the integer data type, and assigned reference of x into a void pointer y. Using printf(), we are displaying the value of y by dereferencing it.
+
+19. How Multithreading will be achieved in Python?
+
+
+
