@@ -736,4 +736,9 @@ Output:
                         
 emocleW oT tiBweivretnI
                         
+Conclusion:
+                        
+The Cisco interview questions and answers provided here will guide you to prepare for your upcoming interview and face the questions confidently. In order to add more weightage to your resume, you can take up a Cisco certification or course.
+
+Alternatively, you may go through resources on various other Networking and Hardware concepts to grow your knowledge. Preparing for the Cisco interview questions and answers in this article will definitely help you stand out as a strong potential candidate for the job.
                         
