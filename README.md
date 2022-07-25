@@ -184,5 +184,24 @@ In the above-given code, we have declared a normal variable x with the integer d
 
 19. How Multithreading will be achieved in Python?
 
+Python has a Global Interpreter Lock (GIL) that makes sure only one of your ‘threads’ can be executed at a time. A thread will acquire the GIL, does a small amount of work, 
+then the GIL will be passed onto the next thread.
+This happens so quickly as if your threads are executing in parallel, but in reality, they are just taking turns using the same CPU core.
+All this GIL passing process will add overhead to the execution. This indicates that, if you want to speed up your code run, then the usage of the threading package often is not considered to be a good idea.
+![How_Multithreading_will_be_achieved_in_Python](https://user-images.githubusercontent.com/81725794/180700846-e25fbff1-beac-444a-9e15-5ebb5a8a8a0a.png)
+
+20. What is an auto keyword in C?
+
+The auto keyword is used for declaring a variable that has a complicated type. For example, an auto keyword can be used for variable declaration where the initialization expression consists of templates, pointers to members, or pointers to functions.
+It can also be used for declaring and initializing a variable to a lambda expression. You cannot declare the variable type on your own because the type of lambda expression will be only known to the compiler.
+Auto variables can be accessed only within the block or function in which they have been declared and cannot be accessed outside of them. By default, they are assigned with garbage value whenever they are declared without assigning any value.
+Syntax: auto <data_type> <variable_name>;
+
+Example:
+auto int x = 1;
+
+Here, x is a variable of storage class “auto” and with data type int.
+
+21. Write a program to create a stack using a linked list in Java.
 
 
